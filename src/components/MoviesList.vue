@@ -10,19 +10,20 @@
 import Movie from "./Movie.vue";
 export default {
   name: "MoviesList",
-  created: function() {
-    this.fetchData();
-  },
+
   data() {
     return {
       movies: []
     };
   },
+  created: function() {
+    this.fetchData();
+  },
   methods: {
     fetchData: async function() {
       try {
         const res = await fetch(
-          "https://api.themoviedb.org/3/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc/movie&api_key=27a97db4259eddae7c5074e18978bd3c"
+          "https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2020-01-15&primary_release_date.lte=2020-07-22&api_key=27a97db4259eddae7c5074e18978bd3c"
         );
         const movies = await res.json();
         this.movies = movies.results;
@@ -31,6 +32,7 @@ export default {
       }
     }
   },
+
   components: {
     Movie
   }
@@ -47,5 +49,16 @@ ul {
 }
 li {
   margin: 20px;
+}
+
+button {
+  padding: 10px 25px;
+  background: #f3f3f3;
+  border: none;
+  border-radius: 10px;
+}
+
+.overview {
+  max-width: 300px;
 }
 </style>

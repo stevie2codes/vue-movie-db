@@ -1,25 +1,21 @@
 <template>
   <div id="app">
     <Header :title="title" />
-    <MoviesList />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import MoviesList from "./components/MoviesList.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
-    MoviesList
+    Header
   },
   data() {
     return {
-      hello: "you homie what it do?",
-      title: "Vue Movie DB",
-      isTrue: true
+      title: "Vue Movie DB"
     };
   }
 };
