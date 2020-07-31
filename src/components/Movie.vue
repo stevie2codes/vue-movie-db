@@ -1,6 +1,6 @@
 <template>
   <router-link :to="moviePath">
-    <img :src="posterImage" :alt="movie.title" />
+    <img :src="posterImage" :alt="movie.title" @error="imgPlaceHolder" />
   </router-link>
 </template>
 
@@ -10,10 +10,17 @@ export default {
   props: ["movie"],
   computed: {
     posterImage: function() {
-      return `${POSTER_PATH}/${this.movie.poster_path}`;
+      const poster = `${POSTER_PATH}/${this.movie.poster_path}`;
+      return poster;
     },
     moviePath: function() {
       return `/movie/${this.movie.id}`;
+    }
+  },
+  methods: {
+    imgPlaceHolder: function(e) {
+      e.target.src =
+        "https://dummyimage.com/154x230/000000/ededed.png&text=Image+unavailable+:(";
     }
   }
 };

@@ -1,11 +1,12 @@
 <template>
   <header>
-    <h1>
-      <router-link to="/">
-        <img class="logo" src="../assets/mdb.svg" alt="Mdb logo" />
-      </router-link>
+    <router-link to="/">
+      <img class="logo" src="../assets/mdb.svg" alt="Mdb logo" />
+    </router-link>
+    <div class="navLinks">
       <router-link to="/search"><h4>Search</h4></router-link>
-    </h1>
+      <router-link to="/"><h4>Home</h4></router-link>
+    </div>
   </header>
 </template>
 
@@ -26,12 +27,22 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: transparent;
   padding: 20px;
   color: #fefefe;
 }
-h1 {
-  margin: 0;
+.navLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0px 20px;
 }
 .logo {
   width: 100px;
