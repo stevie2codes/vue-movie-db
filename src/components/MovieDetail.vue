@@ -1,16 +1,14 @@
 <template>
   <div class="movie-wrapper">
     <div class="poster" :style="styles"></div>
-    <transition name="fade">
-      <div class="movieInfo">
-        <h1>{{ movie.title }}</h1>
-        <h3>Relase Date: {{ movie.release_date }}</h3>
-        <h3>Rating: {{ this.movie.vote_average }}/10</h3>
-        <h5>Overview:</h5>
-        <p>{{ movie.overview }}</p>
-        <h6>Runtime: {{ this.movie.runtime }} minutes</h6>
-      </div>
-    </transition>
+    <div class="movieInfo">
+      <h1>{{ movie.title }}</h1>
+      <h3>Relase Date: {{ movie.release_date }}</h3>
+      <h3>Rating: {{ this.movie.vote_average }}/10</h3>
+      <h5>Overview:</h5>
+      <p>{{ movie.overview }}</p>
+      <h6>Runtime: {{ this.movie.runtime }} minutes</h6>
+    </div>
   </div>
 </template>
 
@@ -83,15 +81,5 @@ h5 {
   border-radius: 3px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   text-align: left;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-100%);
 }
 </style>
