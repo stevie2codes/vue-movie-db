@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header :title="title" />
+
     <router-view />
   </div>
 </template>

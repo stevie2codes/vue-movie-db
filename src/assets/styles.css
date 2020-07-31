@@ -1,3 +1,8 @@
+:root {
+  --blue: #01b4e4;
+  --green: #90cea1;
+  --darkBlue: #0d253f;
+}
 body {
   margin: 0;
   padding: 0;

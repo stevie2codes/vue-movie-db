@@ -1,7 +1,9 @@
 <template>
   <header>
     <h1>
-      <router-link to="/">{{ title }}</router-link>
+      <router-link to="/">
+        <img class="logo" src="../assets/mdb.svg" alt="Mdb logo" />
+      </router-link>
     </h1>
   </header>
 </template>
@@ -14,6 +16,7 @@ export default {
   },
   data() {
     return {
+      show: false,
       name: "stevo"
     };
   }
@@ -22,11 +25,14 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: #b44040;
+  background-color: transparent;
   padding: 20px;
   color: #fefefe;
 }
 h1 {
   margin: 0;
+}
+.logo {
+  width: 100px;
 }
 </style>
