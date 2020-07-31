@@ -1,9 +1,12 @@
 <template>
-  <ul>
-    <li v-for="(movie, index) in movies" :key="index">
-      <Movie :movie="movie" />
-    </li>
-  </ul>
+  <div>
+    <h1>In Theatres</h1>
+    <ul>
+      <li v-for="(movie, index) in movies" :key="index">
+        <Movie :movie="movie" />
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

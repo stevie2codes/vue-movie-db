@@ -4,6 +4,7 @@
       <router-link to="/">
         <img class="logo" src="../assets/mdb.svg" alt="Mdb logo" />
       </router-link>
+      <router-link to="/search"><h4>Search</h4></router-link>
     </h1>
   </header>
 </template>
