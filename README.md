@@ -1,24 +1,16 @@
 # vue-movie-db
 
-## Project setup
-```
-npm install
-```
+Getting familiar with the Vue framework .
+Utilizing The Movie database api to fetch Movies in theatres and
+a search function to search for any movie within the database.
+Each movie selected will send you to a details page to provide you
+with the movies title, posterImage, rating, runtime and description.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![preview-image](https://res.cloudinary.com/df9q0hnuw/image/upload/v1596302545/ProjectPreviews/vueMoviedb_bgajv8.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# Tech used
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Vue
+- JavaScript
+- Sass
+- feather icons
