@@ -7,6 +7,9 @@
         name="input"
         placeholder="Search a movie title"
       />
+      <button type="submit">
+        <v-icon name="search" class="searchIcon" />
+      </button>
     </form>
     <ul>
       <li v-for="(movie, index) in movieResult" :key="index">
@@ -58,15 +61,34 @@ ul {
 li {
   margin: 20px;
 }
-
+button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  margin: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
 input {
-  padding: 35px;
+  position: relative;
+  padding: 15px;
   width: 280px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 5px 15px var(--green), 0 0 0 15px #ffffffeb;
+  text-align: center;
+  box-shadow: 0 5px 10px var(--green), 0 0 0 5px #ffffffeb;
   background-color: #77cf8e;
   font-size: 1.2rem;
   outline: none;
+}
+
+.searchIcon {
+  width: 34px;
+  color: white;
 }
 </style>

@@ -4,8 +4,8 @@
       <img class="logo" src="../assets/mdb.svg" alt="Mdb logo" />
     </router-link>
     <div class="navLinks">
-      <router-link to="/search"><h4>Search</h4></router-link>
       <router-link to="/"><h4>Home</h4></router-link>
+      <router-link to="/search"><h4>Search</h4></router-link>
     </div>
   </header>
 </template>
@@ -43,6 +43,12 @@ h4 {
   color: white;
   text-decoration: none;
   padding: 0px 20px;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+a:-webkit-any-link {
+  text-decoration: none;
 }
 .logo {
   width: 100px;

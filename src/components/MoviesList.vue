@@ -26,7 +26,7 @@ export default {
     fetchData: async function() {
       try {
         const res = await fetch(
-          "https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2020-07-15&primary_release_date.lte=2020-07-31&api_key=27a97db4259eddae7c5074e18978bd3c"
+          "https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2020-07-01&primary_release_date.lte=2020-08-01&api_key=27a97db4259eddae7c5074e18978bd3c"
         );
         const movies = await res.json();
         this.movies = movies.results;

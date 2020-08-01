@@ -19,8 +19,7 @@ export default {
   },
   methods: {
     imgPlaceHolder: function(e) {
-      e.target.src =
-        "https://dummyimage.com/154x230/000000/ededed.png&text=Image+unavailable+:(";
+      e.target.src = `https://dummyimage.com/154x230/000000/ededed.png&text=Image+Missing`;
     }
   }
 };
@@ -29,5 +28,8 @@ export default {
 <style lang="scss" scoped>
 img {
   box-shadow: 0 0 35px black;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 </style>
